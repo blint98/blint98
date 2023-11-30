@@ -7,5 +7,12 @@ pipeline {
       }
     }
 
+    stage('kövi') {
+      steps {
+        sh '''sudo apt install docker.io -y 
+docker run ubuntu'''
+      }
+    }
+
   }
 }
