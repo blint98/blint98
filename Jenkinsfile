@@ -10,8 +10,8 @@ pipeline {
     stage('docker') {
       steps {
         dockerNode(image: 'ubuntu') {
-          sh '''sudo apt install docker.io
-docker run -d ubuntu'''
+          sh '''apt install python3 -y 
+apt install docker-compose -y '''
         }
 
       }
