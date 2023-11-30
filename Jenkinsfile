@@ -7,9 +7,9 @@ pipeline {
       }
     }
 
-    stage('kövi') {
+    stage('docker') {
       steps {
-        sh '''sudo apt install docker.io -y 
+        sh '''apt install docker.io -y 
 docker run ubuntu'''
       }
     }
