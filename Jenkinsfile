@@ -14,7 +14,7 @@ pipeline {
       steps {
         script {
           docker.image('ubuntu').inside {
-            // Ubuntu frissítése és a Docker telepítése
+            // Ubuntu frissit�s
             sh 'apt-get update && apt-get install -y docker.io'
           }
         }
