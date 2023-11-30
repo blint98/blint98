@@ -9,8 +9,11 @@ pipeline {
 
     stage('docker') {
       steps {
-        sh '''apt install docker.io -y 
-docker run ubuntu'''
+        dockerNode(image: 'ubuntu') {
+          sh '''sudo apt install docker.io
+docker run -d ubuntu'''
+        }
+
       }
     }
 
